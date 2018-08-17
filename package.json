@@ -1,0 +1,15 @@
+{
+  "name": "eslint-config-tarol",
+  "version": "0.0.0",
+  "description": "tarol's eslint config",
+  "main": "index.js",
+  "author": "tarol",
+  "dependencies": {
+    "babel-eslint": "^9.0.0-beta.3"
+  },
+  "peerDependencies": {
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-react": "^7.11.1"
+  },
+  "license": "MIT"
+}
