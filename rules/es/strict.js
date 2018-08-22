@@ -10,7 +10,7 @@ module.exports = {
   "id-length": [
     2,
     {
-      min: 3,
+      min: 2,
       max: 30,
       properties: "never",
       exceptions: ["e", "i", "j", "k", "m", "n", "v", "x", "y", "z"] // e用于 error，i、j、k、m、n、x、y、z用于遍历，v用于 value
@@ -38,7 +38,7 @@ module.exports = {
   "no-use-before-define": [2, { functions: false }], // 未声明不可使用，默认{ "functions": true, "classes": true, variables: true }
   "no-useless-call": 2, // 禁止无意义的 call 和apply，如foo.call(null); obj.foo.call(obj)
   "no-var": 1, // 禁止使用var声明变量
-  "one-var": 2, // 一个作用域内的声明必须是一个语句
+  'one-var': [2, { var: 'consecutive', let: 'consecutive', const: 'consecutive', separateRequires: true }], // 一个作用域内的声明必须是一个语句
   "prefer-const": 1, // 变量声明优先使用const
   "symbol-description": 2, // Symbol()必须传参
   "valid-jsdoc": 2, // 注释的正确性
