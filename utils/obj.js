@@ -1,4 +1,4 @@
-exports.clone = function clone(obj) {
+function clone(obj) {
   const ret = {};
   for (let key in obj) {
     const value = obj[key];
@@ -15,7 +15,7 @@ exports.clone = function clone(obj) {
   return ret;
 };
 
-exports.switchLevel = function switchLevel(obj, from = 2, to = 1) {
+function switchLevel(obj, from = 2, to = 1) {
   const ret = clone(obj);
   for (let rule in ret) {
     const value = ret[rule];
@@ -29,3 +29,6 @@ exports.switchLevel = function switchLevel(obj, from = 2, to = 1) {
   }
   return ret;
 }
+
+exports.clone = clone;
+exports.switchLevel = switchLevel;
