@@ -72,7 +72,6 @@ const strict = {
   "react/no-multi-comp": 2,
   "react/no-redundant-should-component-update": 2,
   "react/no-typos": 2,
-  "react/no-typos": 2,
   "react/no-unused-prop-types": 2,
   "react/no-unused-state": 2,
   "react/prefer-es6-class": 2,

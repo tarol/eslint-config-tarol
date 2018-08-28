@@ -10,7 +10,7 @@ module.exports = {
   "id-length": [
     2,
     {
-      min: 2,
+      min: 2, // fd(formData)，fr(fileReader)等
       max: 30,
       properties: "never",
       exceptions: ["e", "i", "j", "k", "m", "n", "v", "x", "y", "z"] // e用于 error，i、j、k、m、n、x、y、z用于遍历，v用于 value
