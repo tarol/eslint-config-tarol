@@ -7,11 +7,11 @@ const whiteSpacing = {
   "array-bracket-spacing": 2, // 数组字面量的中括号到内容的空格，默认never
   "arrow-spacing": 2, // 箭头函数箭头前后的空格，默认{ "before": true, "after": true }
   "block-spacing": 2, // 大括号的空格，默认always
-  "brace-style": [2, '1tbs', { allowSingleLine: true }], // 大括号的换行，默认1tbs
+  "brace-style": 2, // 大括号的换行，默认1tbs，allowSingleLine会导致行太长
   "comma-spacing": 2, // 逗号前后的空格，默认{ "before": false, "after": true }
   "comma-style": 2, // 逗号的换行，默认last
   "computed-property-spacing": 2, // a[b]中中括号的空格，默认never
-  "dot-location": [2, "property"], // MemberExpression换行时，dot 跟随的 node，'object'
+  "dot-location": [2, "property"], // MemberExpression换行时，dot 跟随的 node，默认'object'
   "eol-last": 2, // 文件末尾空行，默认always
   "func-call-spacing": 2, // 函数调用时函数名和参数括号之间的空格，默认never
   "generator-star-spacing": 2, // generator声明时*前后的空格，默认{ "before": true, "after": false }
@@ -74,7 +74,7 @@ const whiteSpacing = {
 // 标点符号
 const sign = {
   "comma-dangle": [2, "always-multiline"], // 末尾的逗号，默认default
-  curly: [2, "all"], // 大括号
+  curly: 2, // 大括号，默认all
   "jsx-quotes": 2, // jsx中属性的引号，默认prefer-double
   "quote-props": [2, "as-needed"], // object 字面量中 property key的引号，默认always
   quotes: [2, "single"], // 引号，默认{"avoidEscape": true, "allowTemplateLiterals": true}
