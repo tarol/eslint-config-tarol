@@ -87,7 +87,7 @@ const syntax = {
   "no-extra-bind": 2, // 去除无意义的bind，比如函数体中没有访问this关键字，函数是箭头函数
   "no-extra-parens": 2, // 去除多余的括号，默认all
   "no-floating-decimal": 2, // 使用更严格的模式规范浮点数字面量，.5 => 0.5
-  "no-lonely-if": 2, // 去除多余的if，if(a) {} else { if (b) {} } => if(a) {} else if(b) {}
+  // "no-lonely-if": 2, // 去除多余的if，if(a) {} else { if (b) {} } => if(a) {} else if(b) {}，影响阅读性
   "no-unneeded-ternary": [2, { defaultAssignment: false }], // 禁止不必要的三元表达式，如 x ? x : 1 => x || 1
   "no-useless-computed-key": 2, // 禁止object 字面量中不必要的computed property key，如 a['b' + 'c'] => a.bc
   "no-useless-rename": 2, // 去除不必要的rename，如import { foo as foo } from "bar"
