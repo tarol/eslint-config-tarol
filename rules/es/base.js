@@ -33,7 +33,7 @@ module.exports = {
   "no-path-concat": 2, // 不使用__dirname + 'file.ext' 的方式生成路径，使用path.join/resolve等，防止路径不合法
   "no-proto": 2, // 不使用__proto__访问原型，而使用Object.getPrototype，因为__proto__非标准规范
   "no-self-compare": 2, // 禁止相同表达式之间的比较，比如+a === +a，防误写
-  "no-unused-expressions": [2, { allowShortCircuit: true, allowTernary: true }], // 禁止无意义的表达式语句，默认{ allowShortCircuit: false, allowTernary: false }
+  // "no-unused-expressions": [2, { allowShortCircuit: true, allowTernary: true }], // 禁止无意义的表达式语句，默认{ allowShortCircuit: false, allowTernary: false }，暂不支持do expression
   "no-unused-vars": [2, { ignoreRestSiblings: true }], // 禁止未被使用的变量声明
   "no-useless-constructor": 2, // 禁止不必要的constructor，如class A {constructor() {}}
   "no-warning-comments": 1, // 禁止存在某几种注释，默认{ "terms": ["todo", "fixme", "xxx"], "location": "start" }，提示开发人员注意
