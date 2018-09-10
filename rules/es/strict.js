@@ -18,7 +18,7 @@ module.exports = {
   ], // 变量名长度限制
   "max-classes-per-file": 1, // 单个文件中最多声明几个类，默认1
   "max-depth": 1, // 防止{}地狱，块的最大层级，默认{ "max": 4 }
-  "max-lines-per-function": 1, // 单函数最大行数，默认{ max: 50 }
+  "max-lines-per-function": [1, { skipComments: true }], // 单函数最大行数，默认{ max: 50 }
   "max-nested-callbacks": [1, { max: 3 }], // 防止回调地狱，回调的最大层级，默认{ max: 10 }
   "max-params": 1, // 函数允许的最大参数数，默认{ max: 3 }
   "max-statements-per-line": 1, // 单行最大表达式数，默认{ "max": 1 }
@@ -26,7 +26,7 @@ module.exports = {
   "no-duplicate-imports": 2, // 禁止多次引入同一个包
   "no-func-assign": 1, // 函数变量不能被再次赋值
   "no-implied-eval": 1, // setTimeout/setInterval不能传入执行语句字符串
-  "no-invalid-this": 2, // 禁止非法的this关键字，比如全局环境下this.a = 0; var a = () => this
+  // "no-invalid-this": 2, // 禁止非法的this关键字，比如全局环境下this.a = 0; var a = () => this，有误判
   "no-restricted-imports": [2, { patterns: ["lodash/*", "!lodash/fp"] }], // 禁止import指定包
   "no-restricted-modules": [2, { patterns: ["lodash/*", "!lodash/fp"] }], // 禁止require指定包
   "no-restricted-syntax": [2, "SequenceExpression"], // 禁止指定的ast node
@@ -38,7 +38,15 @@ module.exports = {
   "no-use-before-define": [2, { functions: false }], // 未声明不可使用，默认{ "functions": true, "classes": true, variables: true }
   "no-useless-call": 2, // 禁止无意义的 call 和apply，如foo.call(null); obj.foo.call(obj)
   "no-var": 1, // 禁止使用var声明变量
-  'one-var': [2, { var: 'consecutive', let: 'consecutive', const: 'consecutive', separateRequires: true }], // 一个作用域内的声明必须是一个语句
+  // "one-var": [
+  //   2,
+  //   {
+  //     var: "consecutive",
+  //     let: "consecutive",
+  //     const: "consecutive",
+  //     separateRequires: true
+  //   }
+  // ], // 一个作用域内的声明必须是一个语句，有bug https://github.com/eslint/eslint/issues/10784
   "prefer-const": 1, // 变量声明优先使用const
   "symbol-description": 2, // Symbol()必须传参
   "valid-jsdoc": 2, // 注释的正确性
