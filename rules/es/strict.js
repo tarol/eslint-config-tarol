@@ -5,7 +5,19 @@ module.exports = {
   camelcase: 2, // 驼峰命名
   "consistent-this": 2, // this 只能赋给 that，默认that
   "func-name-matching": 1, // var a = function b() {}，函数名和变量名必须保持一致
-  "function-paren-newline": [2, { minItems: 4 }], // 函数创建或调用时(后的换行，默认multiline
+  /**
+   * 过于严格且不自由，开启后会和其他rule冲突，比如
+   * arr.push(<Widget>
+   * text
+   * </Widget>)
+   * 不符合react/jsx-closing-tag-location
+   * 但改为
+   * arr.push(
+   *  <Widget>text</Widget>
+   * )
+   * 则和本rule冲突，但后者明显更合理
+   */
+  // "function-paren-newline": [2, { minItems: 4 }], // 函数创建或调用时(后的换行，默认multiline
   "handle-callback-err": 2, // callback中第一个参数为 err 时是否对err进行了处理，默认err
   "id-length": [
     2,
