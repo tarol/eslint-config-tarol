@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-tarol",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "tarol's eslint config",
   "main": "index.js",
   "author": "tarol",
