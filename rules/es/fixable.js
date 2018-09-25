@@ -94,7 +94,7 @@ const syntax = {
   "no-useless-return": 2, // 去除不必要的return，如function foo() { return; }
   "operator-assignment": 2, // 是否允许赋值表达式的多操作符，如a += 1，默认always
   "prefer-numeric-literals": 2, // 使用数字字面量而不是parseInt，parseInt('11', 2) => 0b11
-  strict: 2, // 'use strict'的使用问题
+  // strict: 2, // 'use strict'的使用问题，会去除directive
   yoda: 2 // 使用尤达表达式，即常亮 === 变量，默认never
 };
 
