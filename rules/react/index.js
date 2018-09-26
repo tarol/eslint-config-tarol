@@ -59,7 +59,7 @@ const base = {
     }
   ],
   "react/no-children-prop": 2,
-  "react/prefer-stateless-function": 1,
+  "react/prefer-stateless-function": [1, { ignorePureComponents: true }], // stateless function不是pure component，所以不能将pure转为stateless
   "react/no-did-mount-set-state": 1,
   "react/no-did-update-set-state": 2,
   "react/no-will-update-set-state": 2
@@ -69,7 +69,7 @@ const strict = {
   "react/default-props-match-prop-types": 2,
   "react/jsx-pascal-case": 2,
   "react/no-access-state-in-setstate": 2,
-  "react/no-multi-comp": [2, { ignoreStateless: true }],  // 要忽略stateless，一般几行的stateless不建议新建文件
+  "react/no-multi-comp": [2, { ignoreStateless: true }], // 要忽略stateless，一般几行的stateless不建议新建文件
   "react/no-redundant-should-component-update": 2,
   "react/no-typos": 2,
   "react/no-unused-prop-types": 2,
