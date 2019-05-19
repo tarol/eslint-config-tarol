@@ -7,7 +7,7 @@ module.exports = {
       node: true,
       jest: true
     },
-    parser: "babel-eslint",
+    parser: 'babel-eslint',
     parserOptions: {
       ecmaFeatures: {
         ecmaVersion: 2018,
@@ -18,11 +18,14 @@ module.exports = {
   react: {
     settings: {
       react: {
-        version: "15.6"
+        version: '15.6'
       }
     }
   },
   _import: {
     plugins: ['import']
+  },
+  ts: {
+    parser: '@typescript-eslint/parser'
   }
 };
